@@ -21,15 +21,15 @@ func main() {
 	}
 	defer conn.Close()
 	client := operate.NewAppClient(conn)
-	reply, err := client.DeleteContent(context.Background(), &operate.DeleteContentReq{
-		Id: 14,
-		//Content: &operate.Content{
-		//	Id:          14,
-		//	Title:       "test content_manage create",
-		//	VideoUrl:    "https://example.com/video.mp4",
-		//	Author:      "lucky",
-		//	Description: "test update",
-		//},
+	reply, err := client.CreateContent(context.Background(), &operate.CreateContentReq{
+		// Id: 14,
+		Content: &operate.Content{
+			Id:          12,
+			Title:       "test content_manage create",
+			VideoUrl:    "https://example.com/video.mp4",
+			Author:      "lucky",
+			Description: "test update",
+		},
 	})
 	if err != nil {
 		log.Fatal(err)

@@ -45,9 +45,9 @@ type ContentDetail struct {
 	CreatedAt      time.Time     `gorm:"column:created_at"`      // 内容创建时间
 }
 
-//func (c ContentDetail) TableName() string {
-//	return "cms_content.t_content_details"
-//}
+// func (c ContentDetail) TableName() string {
+// 	return "cms_content.t_content_details"
+// }
 
 type IdxContentDetail struct {
 	ID        int64     `gorm:"column:id;primary_key"` // 自增ID
